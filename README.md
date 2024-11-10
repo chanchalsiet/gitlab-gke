@@ -95,7 +95,7 @@ gcloud redis instances create gitlab --tier=basic \
 ## Step #4 Connect to GKE Cluster
 
 ```bash
-gcloud container clusters get-credentials gitlab-poc-01 --region us-central1 --project elastiq-internship-chanchal-01
+gcloud container clusters get-credentials gitlab-poc-01 --zone us-central1-c --project elastiq-internship-chanchal-01
 ```
 
 
