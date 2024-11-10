@@ -10,6 +10,12 @@ Costing evaluating based on below reference architecture
 
 GKE autopilot did not worked due to quota limit of free account
 
+### Step#0 
+We will be creating GKE with private nodes only, that means all the traffic to internet must go through Cloud NAT.
+Create a cloud NAT with static public IP, we need to whitelist this Cloud NAT ip in the cloud SQL authorized networks,
+so gitlab pods from GKE can reach to cloud sql db.
+
+Create the Cloud NAT in same region and network as our GKE cluster will be.
 
 ### Step #1 Create Autopilot cluster
 
@@ -31,6 +37,7 @@ gcloud beta container clusters create "gitlab-poc-01" \
   --logging=SYSTEM,WORKLOAD \
   --monitoring=SYSTEM,STORAGE,POD,DEPLOYMENT,STATEFULSET,DAEMONSET,HPA,CADVISOR,KUBELET \
   --enable-ip-alias \
+  --enable-private-nodes \
   --network "projects/elastiq-internship-chanchal-01/global/networks/default" \
   --subnetwork "projects/elastiq-internship-chanchal-01/regions/us-central1/subnetworks/default" \
   --no-enable-intra-node-visibility \
