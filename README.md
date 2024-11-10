@@ -115,7 +115,7 @@ kubectl get secret gitlab-postgress-password -o jsonpath='{.data}'
 ```
 
 
-## Step#6 Deploy Github using Helm Chart on GKE
+## Step#6 Deploy Gitlab using Helm Chart on GKE
 Reference: https://docs.gitlab.com/charts/quickstart/index.html
 
 Gitlab Helm chart configuation: https://docs.gitlab.com/charts/charts/globals.html
