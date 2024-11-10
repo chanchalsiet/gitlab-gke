@@ -59,13 +59,14 @@ gcloud beta container clusters create "gitlab-poc-01" \
   --node-locations "us-central1-c"
 
 ```
+![gke_cluster.png](gke_cluster.png)
 
 
-## Step #2 Create Cloud SQL instance - Optional
+## Step #2 Create Cloud SQL instance
 ```yaml
 Configuration:
-  PublicIp: 34.67.201.232
-  Password: 4MMQ8uH4O
+  PublicIp: 
+  Password: 
   ConnectionName: elastiq-internship-chanchal-01:us-central1:gitlab
   Others: 
     vCPUs: 2
@@ -75,7 +76,7 @@ Configuration:
   Metadata:
     - "No backup"
 ```
-
+![cloud_sql_postgres.png](cloud_sql_postgres.png)
 
 ## Step #3 Create Memory Store Redis - Optional
 ```bash

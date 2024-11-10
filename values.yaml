@@ -4,7 +4,6 @@ global:
   hosts:
     domain: chanchal.gitlab.com
   psql:
-    install: false
     host: 130.211.212.56
     port: 5432
     database: gitlab
