@@ -1,0 +1,32 @@
+postgresql:
+  install: false
+global:
+  hosts:
+    domain: chanchal.gitlab.com
+  psql:
+    install: false
+    host: 130.211.212.56
+    port: 5432
+    database: gitlab
+    username: postgres
+    password:
+      useSecret: true
+      secret: gitlab-postgress-password
+      key: postgresql-password
+    http: true
+  smtp:
+    enabled: false
+  appConfig:
+    defaultProjectsFeatures:
+      builds: true
+      containerRegistry: true
+      issues: true
+      mergeRequests: true
+      snippets: true
+      wiki: true
+
+certmanager-issuer:
+  email: chanchalsiet@gmail.com
+
+redis:
+  install: true
